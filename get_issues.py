@@ -9,18 +9,13 @@ from openpyxl.styles import Font, Side, Border
 """
 
 """
-    09.22   22896 - [BR][IDB] HMC AE 21MY M 등록
-    09.22   30344 - [IDB] TML Kanger2.0 T-car 用
-    09.22   29350 - [IDB] WEIMA APE-5 Proto 用
-    09.22   30554 - [100KR] SEM N7 DV S/W 用
-    09.22   17123 - [BR] [IDB] JK1 내수 SOP Event
-    09.24   29768 - [IDB] FAW N117 Proto (Mando Internal)
-    09.24   29769 - [IDB] NIO Force Proto (Mando Internal)
-    09.25   30607 - [BR] [100CN] SV51-01 GB6(MoC Si Base/Prime) SOP R/C
-    09.22   29387 - [RCU] WEIMA APE-5 Proto 用
+    10.07   29350 - [IDB] WEIMA APE-5 Proto 用
+    10.07   29387 - [RCU] WEIMA APE-5 Proto 用
+    10.07   17123 - [BR] [IDB] JK1 내수 SOP Event
+    10.07   AHBG3 DE (P)HEV PE 21MY
 """
-ED4_WORK_LIST = [22896, 30344, 29350, 30554, 17123, 29768, 29769, 30607, 29387]
-REG_EVENT_LIST = ['AE 21MY M','TML Kanger2.0 T-car','IDB APE-5 Proto','N7 DV','JK1 SOP','N117 Proto','Force Proto','SV51-01 GB6 RC','RCU APE-5 Proto']
+ED4_WORK_LIST = [29350, 29387, 17123]
+REG_EVENT_LIST = ['IDB APE-5 Proto','RCU APE-5 Proto','JK1 SOP']
 
 def PM_Redmine_Issue_List(Input):
     redmine = Redmine('http://191.1.11.178', username='sk.hahm', password='dbsguswls22@')
@@ -95,7 +90,7 @@ def ED4_Find_Member():
         ED4findmember.append(j)
     return ED4findmember
 
-def ED4_Work_List_CW39():
+def ED4_Work_List_Func():
     for j in range(len(ED4_WORK_LIST)):
         PM_Redmine_Issue_List(ED4_WORK_LIST[j])
 
@@ -117,7 +112,7 @@ def Export_Excel(SheetNum, TiltleList, MemberName, Tracker, URL):
 
 
 wb = Workbook()     # create work book
-ED4_Work_List_CW39()
-wb.save("CW39.xlsx")
+ED4_Work_List_Func()
+wb.save("CW40.xlsx")
 
 # PM_Redmine_Issue_List(17111)
