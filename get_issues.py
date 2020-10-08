@@ -9,13 +9,14 @@ from openpyxl.styles import Font, Side, Border
 """
 
 """
-    10.07   29350 - [IDB] WEIMA APE-5 Proto 用
-    10.07   29387 - [RCU] WEIMA APE-5 Proto 用
-    10.07   17123 - [BR] [IDB] JK1 내수 SOP Event
-    10.07   AHBG3 DE (P)HEV PE 21MY
+    10.12   30344 - [IDB] TML Kanger2.0 T-car 用
+    10.12   29350 - [IDB] WEIMA APE-5 Proto 用
+    10.12   29387 - [RCU] WEIMA APE-5 Proto 用
+    10.13   30554 - [100KR] SEM N7 DV S/W 用
+    10.16   [IDB] TML Kanger2.0 PROTO
 """
-ED4_WORK_LIST = [29350, 29387, 17123]
-REG_EVENT_LIST = ['IDB APE-5 Proto','RCU APE-5 Proto','JK1 SOP']
+ED4_WORK_LIST = [30344, 29350, 29387, 30554]
+REG_EVENT_LIST = ['Knager2.0 T car', 'IDB APE-5 Proto','RCU APE-5 Proto','N7 DV']
 
 def PM_Redmine_Issue_List(Input):
     redmine = Redmine('http://191.1.11.178', username='sk.hahm', password='dbsguswls22@')
@@ -113,6 +114,6 @@ def Export_Excel(SheetNum, TiltleList, MemberName, Tracker, URL):
 
 wb = Workbook()     # create work book
 ED4_Work_List_Func()
-wb.save("CW40.xlsx")
+wb.save("CW41.xlsx")
 
 # PM_Redmine_Issue_List(17111)
