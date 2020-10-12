@@ -9,11 +9,11 @@ from openpyxl.styles import Font, Side, Border
 """
 
 """
-    10.12   30344 - [IDB] TML Kanger2.0 T-car 用
-    10.12   29350 - [IDB] WEIMA APE-5 Proto 用
-    10.12   29387 - [RCU] WEIMA APE-5 Proto 用
-    10.13   30554 - [100KR] SEM N7 DV S/W 用
-    10.16   [IDB] TML Kanger2.0 PROTO
+    10.12   30344 - [IDB] TML Kanger2.0 T-car 用, delay
+    10.12   29350 - [IDB] WEIMA APE-5 Proto 用, delay 
+    10.12   29387 - [RCU] WEIMA APE-5 Proto 用, delay
+    10.13   30554 - [100KR] SEM N7 DV S/W 用, delay
+    10.16   [IDB] TML Kanger2.0 PROTO, delay
 """
 ED4_WORK_LIST = [30344, 29350, 29387, 30554]
 REG_EVENT_LIST = ['Knager2.0 T car', 'IDB APE-5 Proto','RCU APE-5 Proto','N7 DV']
