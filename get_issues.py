@@ -12,12 +12,12 @@ from openpyxl.styles import Font, Side, Border
     10.12   30344 - [IDB] TML Kanger2.0 T-car 用
     10.12   29350 - [IDB] WEIMA APE-5 Proto 用
     10.12   29387 - [RCU] WEIMA APE-5 Proto 用
-    10.12   MGH SU2r T2, No redamine 
+    10.12   31761 - [100KR] SU2r T Event
     10.13   30554 - [100KR] SEM N7 DV S/W 用
     10.14   31667 - [BR] [100CN] CHANA P201 7th SOP R/C 用
 """
-ED4_WORK_LIST = [30344, 29350, 29387, 30554, 31667]
-REG_EVENT_LIST = ['Knager2.0 T car', 'IDB APE-5 Proto','RCU APE-5 Proto','N7 DV', 'P201 7th RC']
+ED4_WORK_LIST = [30344, 29350, 29387, 31761, 30554, 31667]
+REG_EVENT_LIST = ['Knager2.0 T car', 'IDB APE-5 Proto','RCU APE-5 Proto', 'SU2r T2', 'N7 DV', 'P201 7th RC']
 
 def PM_Redmine_Issue_List(Input):
     redmine = Redmine('http://191.1.11.178', username='sk.hahm', password='dbsguswls22@')
