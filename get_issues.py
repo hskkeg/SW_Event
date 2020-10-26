@@ -9,15 +9,20 @@ from openpyxl.styles import Font, Side, Border
 """
 
 """
-    10.12   30344 - [IDB] TML Kanger2.0 T-car 用
-    10.12   29350 - [IDB] WEIMA APE-5 Proto 用
-    10.12   29387 - [RCU] WEIMA APE-5 Proto 用
-    10.12   31761 - [100KR] SU2r T Event
-    10.13   30554 - [100KR] SEM N7 DV S/W 用
-    10.14   31667 - [BR] [100CN] CHANA P201 7th SOP R/C 用
+    10.19   31536 - [BR] [IDB] TM HEV NA SOP R/C event 用
+    10.19   31688 - [BR] [100KR] HM 21MY M Event
+    10.20   30612 - [BR] [100CN] SV51-01 GB5(MoC Si Base) SOP R/C
+    10.20   31702 - [BR][IDB] RG3 SPORT P1 2차 등록 EVENT
+    10.20   24215 - [BR][IDB]CN7 HEV 북미 SOP EVENT
+    10.20   17010 - [BR] [100KR] NX4a M Event
+    10.22   31667 - [BR] [100CN] CHANA P201 7th SOP R/C 用
+    10.22   17073 - [100KR] US4 T Event
+    10.23   31587 - [BR][IDB] FORD CD542 pre-R05 event
+    10.23   31588 - [BR][100GM] FORD CD542 pre-R05 event
+    10.23   16973 - [BR] [100KR] RJ PE P1 Event
 """
-ED4_WORK_LIST = [30344, 29350, 29387, 31761, 30554, 31667]
-REG_EVENT_LIST = ['Knager2.0 T car', 'IDB APE-5 Proto','RCU APE-5 Proto', 'SU2r T2', 'N7 DV', 'P201 7th RC']
+ED4_WORK_LIST = [31536, 31688, 30612, 31702, 24215, 17010, 31667, 17073, 31587, 31588, 16973]
+REG_EVENT_LIST = ['TM HEV NA SOP RC', 'HM 21MY M','SV51-01 GB5 SOP RC', 'RG3 SPORT P1 2nd', 'CN7 HEV NA SOP', 'NX4a M', 'P201 7th RC', 'US4 T', 'IDB CD542 pre-R05', 'MGH CD542 pre-R05', 'RJ PE P1']
 
 def PM_Redmine_Issue_List(Input):
     redmine = Redmine('http://191.1.11.178', username='sk.hahm', password='dbsguswls22@')
@@ -115,6 +120,6 @@ def Export_Excel(SheetNum, TiltleList, MemberName, Tracker, URL):
 
 wb = Workbook()     # create work book
 ED4_Work_List_Func()
-wb.save("CW42.xlsx")
+wb.save("CW43.xlsx")
 
 # PM_Redmine_Issue_List(17111)
